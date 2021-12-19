@@ -15,7 +15,7 @@ def is_perfect_square(num: int) -> bool:
     """
     pass
 
-def is_prime_num(num: int) -> bool:
+def is_prime(num: int) -> bool:
     """
     Determine whether num is a prime number or not
     """
