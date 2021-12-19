@@ -1,3 +1,5 @@
+import math
+
 def main():
     fizzbuzz(2, 144)
 
@@ -23,9 +25,9 @@ def fizzbuzz(start: int, end: int):
 
 def is_perfect_square(num: int) -> bool:
     """
-    Determine whether num is a perfect square or not
+    Returns True if num is a perfect square, False otherwise
     """
-    pass
+    return (math.isqrt(num) ** 2 == num) 
 
 
 def is_prime(num: int) -> bool:
