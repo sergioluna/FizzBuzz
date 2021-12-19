@@ -1,6 +1,6 @@
 import unittest
 
-from main import is_prime
+from main import is_perfect_square, is_prime
 
 class TestFizzBuzz(unittest.TestCase):
 
@@ -18,6 +18,16 @@ class TestFizzBuzz(unittest.TestCase):
                 self.assertFalse(is_prime(n))
 
 
+    def test_is_perfect_square_from_2_to_144(self):
+        perfect_squares = {
+            4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144
+        }
+
+        for n in range(2, 145):
+            if n in perfect_squares:
+                self.assertTrue(is_perfect_square(n))
+            else:
+                self.assertFalse(is_perfect_square(n))
 
 if __name__ == '__main__':
     unittest.main()
