@@ -17,9 +17,9 @@ class TestFizzBuzz(unittest.TestCase):
 
         for n in range(2, 145):
             if n in prime_numbers:
-                self.assertTrue(is_prime(n))
+                self.assertTrue(is_prime(n), f'{n} is prime but got False')
             else:
-                self.assertFalse(is_prime(n))
+                self.assertFalse(is_prime(n), f'{n} is not prime but got True')
 
     def test_is_perfect_square_from_2_to_144(self):
         """
@@ -31,9 +31,9 @@ class TestFizzBuzz(unittest.TestCase):
 
         for n in range(2, 145):
             if n in perfect_squares:
-                self.assertTrue(is_perfect_square(n))
+                self.assertTrue(is_perfect_square(n), f'{n} is perfect square but got False')
             else:
-                self.assertFalse(is_perfect_square(n))
+                self.assertFalse(is_perfect_square(n), f'{n} is not perfect square but got True')
 
 
 if __name__ == '__main__':
