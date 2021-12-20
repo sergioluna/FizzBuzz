@@ -8,13 +8,13 @@ def fizzbuzz(start: int, end: int):
     """
     Prints out all numbers from start to end while appending 'fizz' to
     perfect squares, 'buzz' to prime numbers, and 'fizzbuzz' to numbers that 
-    are both perfect squares and prime numbers.
+    are perfect squares where the square-root is a prime number.
     """
     for num in range(start, end + 1):
         perfect_square = is_perfect_square(num)
         prime = is_prime(num)
         
-        if perfect_square and prime:
+        if perfect_square and is_prime(math.isqrt(num)):
             print(f'{num} fizzbuzz')
         elif perfect_square:
             print(f'{num} fizz')
